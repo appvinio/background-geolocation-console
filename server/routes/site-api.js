@@ -160,7 +160,7 @@ router.get('/locations', checkAuth(verify), async (req, res) => {
 /**
  * POST /locations
  */
-router.post('/locations', getAuth(verify), async (req, res) => {
+router.post('//api/locations', getAuth(verify), async (req, res) => {
   const { body } = req;
   const data = isEncryptedRequest(req)
     ? decrypt(body.toString())
@@ -189,7 +189,7 @@ router.post('/locations', getAuth(verify), async (req, res) => {
 /**
  * POST /locations
  */
-router.post('/locations/:company_token', getAuth(verify), async (req, res) => {
+router.post('//api/locations/:company_token', getAuth(verify), async (req, res) => {
   const { company_token: org } = req.params;
 
   console.info('v1:locations:post'.green, 'org:name'.green, org);

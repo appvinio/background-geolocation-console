@@ -42,7 +42,7 @@ import { getOrgs } from '../firebase/Org.js';
 
 const router = new Router();
 
-router.post('/register', async (req, res) => {
+router.post('//api/register', async (req, res) => {
   const {
     framework,
     manufacturer,
@@ -56,7 +56,7 @@ router.post('/register', async (req, res) => {
 
   // eslint-disable-next-line no-console
   console.info(
-    'POST /register '.green,
+    'POST //api/register '.green,
     'org'.green,
     org,
     'uuid'.green,

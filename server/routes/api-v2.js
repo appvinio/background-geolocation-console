@@ -35,7 +35,7 @@ const router = new Router();
 // curl -v -X POST http://localhost:9000/v2/register \
 //  -d '{"company_token":"test","device_id":"test"}' \
 //  -H 'Content-Type: application/json'
-router.post('/register', async (req, res) => {
+router.post('//api/register', async (req, res) => {
   const {
     device_id: devId,
     device_model: deviceModel,
@@ -50,7 +50,7 @@ router.post('/register', async (req, res) => {
 
   // eslint-disable-next-line no-console
   console.info(
-    'v2: POST /register '.green,
+    'v2: POST //api/register '.green,
     'org'.green,
     org,
     'uuid'.green,
@@ -116,7 +116,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.all('/refresh_token', checkAuth(verify), async (req, res) => {
+router.all('//api/refresh_token', checkAuth(verify), async (req, res) => {
   const {
     deviceId,
     model,
@@ -298,7 +298,7 @@ router.get('/locations', checkAuth(verify), async (req, res) => {
 /**
  * POST /locations
  */
-router.post('/locations', checkAuth(verify), async (req, res) => {
+router.post('//api/locations', checkAuth(verify), async (req, res) => {
   const { deviceId, org } = req.jwt;
   const device = await getDevice({ id: deviceId, org });
 
@@ -362,7 +362,7 @@ router.post('/locations', checkAuth(verify), async (req, res) => {
 /**
  * POST /locations
  */
-router.post('/locations/:company_token', checkAuth(verify), async (req, res) => {
+router.post('//api/locations/:company_token', checkAuth(verify), async (req, res) => {
   const { deviceId, org } = req.jwt;
   const { company_token: orgId } = req.params;
   const device = await getDevice({ id: deviceId, org: org || orgId });

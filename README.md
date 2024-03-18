@@ -19,15 +19,15 @@ npm install
 
 Environment variables:
 ```bash
-export DATABASE_URL=postgres://postgres:password@localhost:5432/geolocation # or skip this line to use sqlite
-export GOOGLE_MAPS_API_KEY=AIz...vNkg # or skip this line
+# export DATABASE_URL=postgres://postgres:password@localhost:5432/geolocation # or skip this line to use sqlite
+# export GOOGLE_MAPS_API_KEY=AIz...vNkg # or skip this line
 # Do you use it for a lot of organisation or users?
-export SHARED_DASHBOARD=1      # with auth,
+export SHARED_DASHBOARD=0      # with auth,
 # export SHARED_DASHBOARD=1    # empty - without auth,
 # Manage them in one account?  http://localhost:8080/admin
-export ADMIN_TOKEN=admin256    # admin login
+export ADMIN_TOKEN=appvinio    # admin login
 # Do you need auth?
-export PASSWORD=test           # admin password
+export PASSWORD=VpKBeTcdCDrxM8BtW6xrpLy2Qq*TdnVt           # admin password
 ```
 
 For production version please do not forget add your own JWT keys
